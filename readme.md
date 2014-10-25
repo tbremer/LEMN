@@ -1,4 +1,4 @@
-# VLAMP
+# LEMN
 A basic Ubuntu 12.04 Vagrant set up with nginx,
 
 ## Requirements

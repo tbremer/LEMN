@@ -1,0 +1,17 @@
+server {
+    listen          80;
+    charset         utf-8;
+    server_name     local.example.com
+                    ~local.example.([0-9\.]+).xip.io
+                    example.com;
+
+    root /var/www/example;
+    access_log /var/www/example/logs/access.log;
+    error_log  /var/www/example/logs/error.log;
+    include global/global.conf;
+
+    location / {
+      proxy_pass http://127.0.0.1:3000/;
+      proxy_redirect off;
+    }
+ }

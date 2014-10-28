@@ -1,0 +1,18 @@
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:28:38.271Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:28:38.272Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:29:45.832Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:29:45.833Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:30:22.857Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:30:22.857Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:51:21.322Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:51:21.323Z"}
+{"level":"debug","message":"{\"from\":1414446702143,\"until\":\"2014-10-28T21:51:42.143Z\",\"limit\":100,\"start\":0,\"order\":\"desc\",\"fields\":[\"message\",\"timestamp\"]}","timestamp":"2014-10-28T21:51:42.143Z"}
+{"level":"debug","message":"{\"from\":1414446705221,\"until\":\"2014-10-28T21:51:45.221Z\",\"limit\":100,\"start\":0,\"order\":\"desc\",\"fields\":[\"message\",\"timestamp\"]}","timestamp":"2014-10-28T21:51:45.221Z"}
+{"level":"debug","message":"{\"from\":1414446706005,\"until\":\"2014-10-28T21:51:46.005Z\",\"limit\":100,\"start\":0,\"order\":\"desc\",\"fields\":[\"message\",\"timestamp\"]}","timestamp":"2014-10-28T21:51:46.005Z"}
+{"level":"debug","message":"{\"from\":1414446706886,\"until\":\"2014-10-28T21:51:46.886Z\",\"limit\":100,\"start\":0,\"order\":\"desc\",\"fields\":[\"message\",\"timestamp\"]}","timestamp":"2014-10-28T21:51:46.886Z"}
+{"level":"debug","message":"{\"from\":1414446707756,\"until\":\"2014-10-28T21:51:47.756Z\",\"limit\":100,\"start\":0,\"order\":\"desc\",\"fields\":[\"message\",\"timestamp\"]}","timestamp":"2014-10-28T21:51:47.756Z"}
+{"level":"debug","message":"{\"from\":1414446708638,\"until\":\"2014-10-28T21:51:48.638Z\",\"limit\":100,\"start\":0,\"order\":\"desc\",\"fields\":[\"message\",\"timestamp\"]}","timestamp":"2014-10-28T21:51:48.638Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T22:04:57.167Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T22:04:57.169Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T22:12:02.005Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T22:12:02.006Z"}

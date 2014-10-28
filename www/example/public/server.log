@@ -1,0 +1,21 @@
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:31:11.364Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:31:11.365Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:39:53.965Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:39:53.966Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:39:55.631Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:39:55.631Z"}
+{"level":"debug","message":"{\"from\":1414446016435,\"until\":\"2014-10-28T21:40:16.435Z\",\"limit\":100,\"start\":0,\"order\":\"desc\",\"fields\":[\"message\",\"timestamp\"]}","timestamp":"2014-10-28T21:40:16.435Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:41:13.885Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:41:13.885Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:50:42.474Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:50:42.475Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:50:44.207Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:50:44.208Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:50:44.840Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:50:44.840Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:51:08.856Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:51:08.856Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:51:11.075Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:51:11.076Z"}
+{"level":"error","message":"fac of face","timestamp":"2014-10-28T21:51:12.067Z"}
+{"level":"debug","message":"debug %s %s %s GET / /","timestamp":"2014-10-28T21:51:12.067Z"}

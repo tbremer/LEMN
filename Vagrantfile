@@ -5,24 +5,31 @@ Vagrant.configure("2") do |config|
     ##
     ## SET UP THE BOX BASICS
     ##
-        config.vm.box = "precise32"
-        config.vm.box_url = "http://files.vagrantup.com/precise32.box"
-        config.vm.hostname = "acorn"
+        config.vm.box = "ubuntu/trusty32"
+        config.vm.provider "virtualbox" do |v|
+            v.name = "LEMN"
+            v.memory = 512
+            v.cpus = 2
+        end
 
     ##
     ## SET UP THE FOLDERS
     ##
-        config.vm.synced_folder "www", "/home/vagrant/www"
+        config.vm.synced_folder "www", "/var/www/"
+        config.vm.synced_folder "bash_scripts", "/home/vagrant/bash_scripts"
+        config.vm.synced_folder "nginx/global", "/etc/nginx/global"
+        config.vm.synced_folder "nginx/sites-available", "/etc/nginx/sites-available"
 
     ##
     ## ADD PORT FORWARDS AND PRIVATE NETWORK
     ##
-        config.vm.network "forwarded_port", guest: 3000, host: 3000
-        #config.vm.network "private_network", ip: "192.168.33.10"
+        config.vm.network "forwarded_port", guest: 80, host: 8888, auto_correct: true ## NGINX LISTEN PORT
+        config.vm.network :forwarded_port, guest: 3306, host: 8889, auto_correct: true ## MYSQL LISTEN PORT
 
     ##
-    ## PROVISION MYSQL
+    ## PROVISION LEMN
     ##
+        config.vm.provision :shell, :path   => "bash_scripts/bootstrap.sh"
         config.vm.provision :puppet do |puppet|
             puppet.manifests_path = "puppet/manifests"
             puppet.manifest_file  = "base.pp"
@@ -32,8 +39,7 @@ Vagrant.configure("2") do |config|
     ##
     ## END OF THE LINE SCRIPTS
     ##
-        config.vm.provision :shell, path: "bootstrap.sh"
-        config.vm.provision :shell, :path => "puppet/scripts/enable_remote_mysql_access.sh"
-        config.vm.provision :shell, :inline => "echo \"America/Chicago\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
+        config.vm.provision :shell, :path   => "puppet/scripts/enable_remote_mysql_access.sh"
+        config.vm.provision :shell, :path   => "bash_scripts/start_nginx_and_node_servers.sh"
 end
 

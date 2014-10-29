@@ -1,4 +1,4 @@
-![LEMN](www/example/app/assets/images/logo-56.png)&nbsp;&nbsp;LEMN
+![LEMN](www/example/app/assets/images/logo-40.png)&nbsp;&nbsp;LEMN
 ==================================================================
 
 ### **LEMN is Linux, NGINX, MySQL & Node**

@@ -95,4 +95,4 @@ Vagrant is [very well documented](http://vagrantup.com/v1/docs/index.html) but h
 -	`vagrant ssh` gives you shell access to the virtual machine
 -	`vagrant destroy` removes all known information about this box (keeps your www folder).
 
-**Table of Contents By: [DocToc](http://doctoc.herokuapp.com/)** &**Markdown Preview By: [StackEdit.io](https://stackedit.io/) **
+**Table of Contents By: [DocToc](http://doctoc.herokuapp.com/)** && **Markdown Preview By: [StackEdit.io](https://stackedit.io/)**

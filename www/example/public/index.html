@@ -2,9 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vagrant Up!</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <title>LEMN &amp;&amp; Vagrant Up!</title>
 </head>
 <body>
-    <div style='text-align: center;'>Hello world!</div>
+    <div class="global-content">
+        <h1 class="global-header">
+            Welcome to LEMN!
+        </h1>
+
+        <section class="tests">
+            <div class='col-1'>
+                Is everything running?
+            </div>
+            <div class="col-2">
+                <ul>
+                    <li>linux: <i class="fa fa-thumbs-o-up"></i></li>
+                    <li>nginx: <i class="fa fa-thumbs-o-up"></i></li>
+                    <li>express: <i class="fa fa-thumbs-o-up"></i></li>
+                    <li>mysql: <span class='js-mysql-isworking'></span></li>
+                </ul>
+            </div>
+        </section>
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="kromagnummopedstl@gmail.com">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="LEMN Developers">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+
+            <button name="submit">
+                <span class="title">Like LEMN? Buy me a coffee!</span>
+                <span class='button-styles'>
+                    <i class="fa fa-coffee fa-lg fa-fw"></i>
+                </span>
+            </button>
+        </form>
+    </div>
+
+    <script>
+    (function ($) {
+        $(function () {
+            $.ajax({
+                url: '/mysql/test',
+                type: 'GET',
+                dataType: 'json',
+                error: function () {
+                    $('.js-mysql-isworking').html('<i class="fa fa-thumbs-o-down"></i>');
+                },
+                success: function (data) {
+                    if (data.success) {
+                        $('.js-mysql-isworking').html('<i class="fa fa-thumbs-o-up"></i>');
+                        return;
+                    }
+
+                    $('.js-mysql-isworking').html('<i class="fa fa-thumbs-o-down"></i>');
+                    return;
+                }
+            });
+        });
+    })(jQuery);
+    </script>
 </body>
 </html>

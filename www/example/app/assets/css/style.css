@@ -1,0 +1,142 @@
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,700);
+/* RESETS */
+* { box-sizing: border-box;}
+
+html,
+body,
+h1, h2, h3, h4, h5, h6,
+ul, li {
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #c2c2c2;
+    font-family: 'Fira Sans', 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+ul {
+    list-style: none;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.global-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+
+
+    text-align: center;
+
+    -webkit-transform: translate(-50%, -85%);
+    -moz-transform: translate(-50%, -85%);
+    -ms-transform: translate(-50%, -85%);
+    -o-transform: translate(-50%, -85%);
+    transform: translate(-50%, -85%);
+}
+
+.global-header {
+    margin: 0 auto;
+    padding-left: 128px;
+    min-width: 320px;
+    max-width: 700px;
+    height: 130px;
+    line-height: 130px;
+
+    background-image: url('/assets/images/logo-256.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size:  128px;
+
+
+    font-size: 4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    cursor: default;
+
+}
+
+.tests {
+    min-width: 320px;
+    max-width: 700px;
+    margin: 30px auto 15px;
+    padding: 10px 0;
+
+    background-color: #efefef;
+    border-radius: 3px;
+}
+
+.tests .col-1,
+.tests .col-2 {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc( 100% / 2.1 );
+}
+
+.tests .col-1 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.tests .col-2 .fa {vertical-align: middle; margin-left: 3px;}
+.tests .col-2 .fa-thumbs-o-up {color: #0a0;}
+.tests .col-2 .fa-thumbs-o-down {color: #a00;}
+
+
+button {
+    border: 0;
+    background-color: transparent;
+    outline: none;
+
+    font-size: 18px;
+}
+
+button .title {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+button .title:hover {
+    text-decoration: underline;
+}
+
+button:active .title {
+    text-decoration: none;
+}
+
+.button-styles {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-left: 7px;
+    padding: 4px 10px 8px;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    vertical-align: middle;
+    -webkit-box-shadow: inset 0 -3px 0 0 #292929;
+    -moz-box-shadow: inset 0 -3px 0 0 #292929;
+    box-shadow: inset 0 -3px 0 0 #292929;
+}
+
+.button-styles .fa {
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+    -webkit-transition: color 150ms linear;
+    -moz-transition: color 150ms linear;
+    transition: color 150ms linear;
+}
+
+.button-styles:hover {
+    top: -1px;
+}
+
+.button-styles:active {
+    top: 1px;
+}

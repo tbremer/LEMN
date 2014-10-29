@@ -1,22 +1,4 @@
 #!/bin/bash
-
-# REMOVE DEFAULT
-if [ -e "/etc/nginx/sites-enabled/default" ]
-then
-    echo "REMOVING NGINX DEFAULT FILE"
-    rm -rf /etc/nginx/sites-enabled/default
-    rm -rf /etc/nginx/sites-available/default
-fi
-
-# SYMLINK EXAMPLE FROM AVAILABLE TO ENABLED
-if [ -e "/etc/nginx/sites-enabled/example" ]
-then
-    echo "Example site already exists... moving on."
-else
-    echo "Symlinking sites..."
-    ln -s /etc/nginx/sites-available/example /etc/nginx/sites-enabled/
-fi
-
 echo "===================================================================================="
 echo "||   ___       ___                                                                ||";
 echo "||  |  _|     |_  |    _           _   _                                          ||";
@@ -28,13 +10,32 @@ echo "||                                                                        
 echo "===================================================================================="
 echo "      "
 echo "      "
-sudo service nginx restart
-SERVERID=`ps ax | grep node | grep -v grep | awk '{print $1}'`
-if [ -z "$SERVERID" ]
+# REMOVE DEFAULT
+if [ -e "/etc/nginx/sites-enabled/default" ]
 then
-    echo "starting node server."
-else
-    echo "already running, killing off and starting fresh!"
+    rm -rf /etc/nginx/sites-enabled/default
+    rm -rf /etc/nginx/sites-available/default
+fi
+
+# SYMLINKING ALL FILES THAT AREN'T ALREADY THERE
+FILES=/etc/nginx/sites-available/*
+for f in $FILES
+do
+    if [ -e $f ]
+    then
+        filename="${f##*/}"
+        if [ ! -e "/etc/nginx/sites-enabled/$filename" ] ; then
+            sudo ln -s $f /etc/nginx/sites-enabled/
+        fi
+    fi
+done
+
+sudo service nginx restart
+
+SERVERID=`ps ax | grep node | grep -v grep | awk '{print $1}'`
+if [ ! -z "$SERVERID" ]
+then
+    echo "server running"
     ps ax | grep node | grep -v grep | awk '{print $1}' | xargs sudo kill
 fi
 

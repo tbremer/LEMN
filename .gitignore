@@ -1,1 +1,8 @@
+# IGNORE THE .VAGRANT FILE
 .vagrant
+
+# IGNORE EVERYTHING THAT ISN'T OUR EXAMPLE SITE
+www/*
+!www/example
+nginx/sites-available/*
+!nginx/sites-available/example

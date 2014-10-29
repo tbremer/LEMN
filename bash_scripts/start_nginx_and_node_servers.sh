@@ -30,13 +30,21 @@ do
     fi
 done
 
+# RESTARTUNG NGINX
 sudo service nginx restart
 
-SERVERID=`ps ax | grep node | grep -v grep | awk '{print $1}'`
+SERVERID=`ps ax | grep -v grep | grep bin/nodejs | awk '{print $1}'`
 if [ ! -z "$SERVERID" ]
 then
     echo "server running"
-    ps ax | grep node | grep -v grep | awk '{print $1}' | xargs sudo kill
+    ps ax | grep -v grep | grep bin/nodejs | awk '{print $1}' | xargs sudo kill
 fi
 
-forever start --no-colors --sourceDir /var/www/example --watchDirectory /var/www/example --watchIgnore **/*.log --watch server.js
+## PROGRAMATICALLY STARTING NODE SERVERS
+SERVERS=/etc/nginx/sites-enabled/*;
+for s in $SERVERS
+do
+    serverName="${s##*/}"
+    dir=/var/www/$serverName
+    forever start --no-colors --sourceDir $dir --watchDirectory $dir --watchIgnore **/*.log --watch server.js
+done
